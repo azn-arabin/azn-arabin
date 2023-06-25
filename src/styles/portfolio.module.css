@@ -1,0 +1,85 @@
+.wrapper {
+  background-color: var(--second-bg);
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  width: calc(33.33% - 20px);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--main-bg);
+  border: 2px solid var(--border-color);
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  border-radius: inherit;
+}
+
+.container > .imgContainer {
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.hoverOn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  top: 0;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: inherit;
+}
+
+.imgContainer > img {
+  border-radius: inherit;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: all 2s ease;
+}
+
+.project:hover .imgContainer > img {
+  transform: scale(1.2);
+  overflow: hidden;
+}
+
+.project:hover .hoverOn {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 991px) {
+  .project {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .projects {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project {
+    width: auto;
+  }
+}
