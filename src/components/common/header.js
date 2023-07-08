@@ -66,6 +66,7 @@ const Header = () => {
           smooth={true}
           delay={10}
           duration={200}
+          offset={0}
         >
           <UilBracketsCurly color={"var(--text-color)"} size={20} />
           <span>Arabin</span>

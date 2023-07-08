@@ -17,7 +17,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 const app = initializeApp(firebaseConfig);
 
-export const analytics = getAnalytics(app);
+export let analytics;
+
+if (typeof window !== "undefined") {
+  analytics = getAnalytics(app);
+}
 
 export default function Home() {
   const theme = useContext(themeContext);

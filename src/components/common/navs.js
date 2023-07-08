@@ -13,6 +13,7 @@ const Navs = ({ className }) => {
         duration={200}
         activeClass={styles.active}
         className={styles.option}
+        offset={0}
       >
         Home
       </Link>
@@ -24,6 +25,7 @@ const Navs = ({ className }) => {
         duration={200}
         activeClass={styles.active}
         className={styles.option}
+        offset={0}
       >
         About
       </Link>
@@ -35,6 +37,7 @@ const Navs = ({ className }) => {
         duration={200}
         activeClass={styles.active}
         className={styles.option}
+        offset={0}
       >
         Services
       </Link>
@@ -46,6 +49,7 @@ const Navs = ({ className }) => {
         duration={200}
         activeClass={styles.active}
         className={styles.option}
+        offset={0}
       >
         Portfolio
       </Link>
@@ -57,6 +61,7 @@ const Navs = ({ className }) => {
         duration={200}
         activeClass={styles.active}
         className={styles.option}
+        offset={0}
       >
         Contact
       </Link>

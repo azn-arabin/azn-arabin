@@ -12,13 +12,16 @@ const Services = () => {
           <Title>My Services</Title>
           <div className={styles.services}>
             {services.map((service, id) => (
-              <div className={styles.service} key={id}>
-                <div className={styles.sLogo}>
-                  {service.icon}
-                  <div />
+              <div className={styles.serviceContainer} key={id}>
+                <div className={styles.serviceBack} />
+                <div className={styles.service}>
+                  <div className={styles.sLogoContainer}>
+                    <div className={styles.sLogoBack} />
+                    <div className={styles.sLogo}>{service.icon}</div>
+                  </div>
+                  <span>{service.name}</span>
+                  <span>{service.description}</span>
                 </div>
-                <span>{service.name}</span>
-                <span>{service.description}</span>
               </div>
             ))}
           </div>
