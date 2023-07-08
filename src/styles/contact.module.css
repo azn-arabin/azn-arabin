@@ -65,6 +65,11 @@
 .inputContainer {
   display: flex;
   gap: 10px;
+  width: 100%;
+}
+
+.inputContainer > * {
+  flex: 1;
 }
 
 .form input {

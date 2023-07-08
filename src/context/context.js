@@ -8,7 +8,16 @@ const themeReducer = (state, action) => {
     case "THEME_CHANGED":
       return {
         ...state,
-        lightTheme: !state.lightTheme,
+        darkTheme: !state.darkTheme,
+      };
+    case "STATE_RETRIEVED":
+      return {
+        ...action.data,
+      };
+    case "INITIALIZE_STATE":
+      return {
+        ...state,
+        darkTheme: false,
       };
     default:
       return state;
@@ -19,15 +28,25 @@ export const ThemeProvider = (props) => {
   const themeLocalStorageKey = "theme";
 
   const initialState = () => {
-    const storedState = window.localStorage.getItem(themeLocalStorageKey);
-    return storedState ? JSON.parse(storedState) : { lightTheme: true };
+    return {};
   };
 
   const [state, dispatch] = useReducer(themeReducer, null, initialState);
 
   useEffect(() => {
-    window.localStorage.setItem(themeLocalStorageKey, JSON.stringify(state));
+    if (typeof window !== "undefined" && "darkTheme" in state) {
+      window.localStorage.setItem(themeLocalStorageKey, JSON.stringify(state));
+    }
   }, [state]);
+
+  useEffect(() => {
+    const storedState = window.localStorage.getItem(themeLocalStorageKey);
+    if (storedState) {
+      dispatch({ type: "STATE_RETRIEVED", data: JSON.parse(storedState) });
+    } else {
+      dispatch({ type: "INITIALIZE_STATE" });
+    }
+  }, []);
 
   return (
     <themeContext.Provider value={{ state, dispatch }}>

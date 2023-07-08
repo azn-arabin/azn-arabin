@@ -18,7 +18,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   const theme = useContext(themeContext);
-  const lightTheme = theme.state.lightTheme;
+  const darkTheme = theme.state.darkTheme;
   const [isScrolled, setIsScrolled] = useState(false);
   const [showNavs, setShowNavs] = useState(false);
 
@@ -75,16 +75,14 @@ const Header = () => {
         <div className={styles.rightSide}>
           <Tooltip
             tooltip={
-              lightTheme ? "Switch to dark theme" : "Switch to light theme"
+              darkTheme ? "Switch to light theme" : "Switch to dark theme"
             }
           >
             <div className={styles.toggle} onClick={handleClick}>
               <UilMoon color={"var(--text-color)"} size={18} />
               <UilSun color={"var(--text-color)"} size={18} />
               <div
-                className={
-                  lightTheme ? styles.tButtonLight : styles.tButtonDark
-                }
+                className={darkTheme ? styles.tButtonDark : styles.tButtonLight}
               />
             </div>
           </Tooltip>

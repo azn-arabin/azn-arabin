@@ -25,11 +25,11 @@ if (typeof window !== "undefined") {
 
 export default function Home() {
   const theme = useContext(themeContext);
-  const lightTheme = theme.state.lightTheme;
+  const darkTheme = theme.state.darkTheme;
 
   return (
     <body
-      className={`${inter.className} ${lightTheme ? "" : "theme-dark"}`}
+      className={`${inter.className} ${darkTheme ? "theme-dark" : ""}`}
       style={{
         backgroundColor: "var(--main-bg)",
         color: "var(--text-color)",
