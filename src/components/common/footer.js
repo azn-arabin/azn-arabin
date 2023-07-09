@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.imgContainer}>
-        <img src={"./images/me.png"} alt={"me"} />
+        <img src={"./images/me.jpg"} alt={"me"} />
       </div>
       <span>Md. Asaduzzaman (Arabin)</span>
       <SocialMedia />

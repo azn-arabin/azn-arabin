@@ -23,10 +23,10 @@ a {
   --button-hover: #8ac3e7;
   --selected-color: #c2e7ff;
   --border-color: #e1e3e1;
+  --placeholder-color: #999;
   --gray: #edf2fa;
   --scrollbar-bg: #f0f0f0;
   --scrollbar-thumb: #c0c0c0;
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .theme-dark {
@@ -40,10 +40,10 @@ a {
   --button-hover: #005f8d;
   --selected-color: #004a77;
   --border-color: #444746;
+  --placeholder-color: #8c8c8c;
   --gray: #34363a;
   --scrollbar-bg: #333333;
   --scrollbar-thumb: #555555;
-  --box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 ::-webkit-scrollbar {

@@ -1,74 +1,64 @@
-<!-- ABOUT THE PROJECT -->
-## About The Project
+# My Portfolio
 
+Welcome to my personal portfolio repository! This project showcases my skills, services, education, experience, and more.
 
-### Built With
+![Chat Application Screenshot](public/images/screenshot.png)
 
-* [next-js](https://nextjs.org/)
-* [firebase](https://firebase.google.com/)
-* [material-ui](https://mui.com/)
-* [react-bootstrap](https://react-bootstrap.github.io/)
-* [sendgrid](https://sendgrid.com/)
-* [font-awesome](https://fontawesome.com/)
-* [styled-components](https://styled-components.com/)
-* [webfontloader](https://developers.google.com/fonts/docs/webfont_loader)
+## Table of Contents
 
-<!-- GETTING STARTED -->
-## Getting Started
+- [Description](#description)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Contact](#contact)
+- [License](#license)
 
-To get a local copy up and running follow these simple steps.
+## Description
 
-### Prerequisites
+This project is developed using Next.js, a React framework for building modern web applications. It provides an interactive and responsive portfolio website to showcase my skills, services, education, experience, and contact form.
 
-To clone this project to your local repo
-* npm
+## Features
 
-### Installation
+- Explore the various services I provide
+- Learn about my educational background
+- Discover my professional experience
+- View my skills and expertise
+- Contact form to get in touch with me
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Arabin1/my_portfolio
-   ```
-2. Run npm Install
-    ```sh
-    npm install
-    ```
-Enjoy.
+## Installation
 
+To run this project locally, follow these steps:
 
-<!-- ROADMAP -->
-## Roadmap
+1. Clone the repository: `git clone https://github.com/Arabin1/my-portfolio.git`
+2. Navigate to the project directory: `cd my-portfolio`
+3. Install the dependencies: `npm install`
 
-See the [open issues](https://github.com/arabin1/my_portfolio/issues) for a list of proposed features (and known issues).
+## Usage
 
+To start the development server, run: `npm run dev`
 
+To build the project for production, run: `npm run build`
 
-<!-- CONTRIBUTING -->
-## Contributing
+To start the production server, run: `npm run start`
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+## Dependencies
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+This project utilizes the following dependencies:
 
+- [@iconscout/react-unicons](https://www.npmjs.com/package/@iconscout/react-unicons)
+- [@sendgrid/mail](https://www.npmjs.com/package/@sendgrid/mail)
+- [Bootstrap](https://getbootstrap.com)
+- [Firebase](https://firebase.google.com)
+- [Framer Motion](https://www.framer.com/api/motion)
+- [React Bootstrap](https://react-bootstrap.github.io)
+- [React Scroll](https://www.npmjs.com/package/react-scroll)
+- [React Toastify](https://www.npmjs.com/package/react-toastify)
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!-- CONTACT -->
 ## Contact
 
-[Md. Asaduzzaman Arabin](mailto:aznarabin@gmail.com?subject=From%20Github%20Repo%20) - email
+For any inquiries or collaboration opportunities, feel free to reach out to me [Md. Asaduzzaman (Arabin)](mailto:aznarabin@gmail.com).
 
+## License
 
-Project Link: [Click here](https://github.com/Arabin1/my_portfolio)
-
-
+This project is licensed under the [MIT License](LICENSE).

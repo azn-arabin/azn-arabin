@@ -74,6 +74,36 @@
 
 .form input {
   height: 45px;
+  background-color: var(--main-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.form input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.form input:focus {
+  background-color: var(--main-bg);
+  border-color: var(--selected-color);
+  color: var(--text-color);
+}
+
+.form textarea {
+  height: 45px;
+  background-color: var(--main-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.form textarea::placeholder {
+  color: var(--placeholder-color);
+}
+
+.form textarea:focus {
+  background-color: var(--main-bg);
+  border-color: var(--selected-color);
+  color: var(--text-color);
 }
 
 @media (max-width: 991px) {
