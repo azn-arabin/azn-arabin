@@ -73,7 +73,7 @@ export const educations = [
     institution: "University of Rajshahi",
     description:
       "As my academic background lies in engineering, I have dedicated my time and efforts to pursuing my interest in the world of software and mobile development through self-study and practical projects.",
-    duration: "Jan, 2018 - Present",
+    duration: "Jan, 2018 - Sep, 2023",
   },
 ];
 

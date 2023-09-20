@@ -34,6 +34,10 @@ To run this project locally, follow these steps:
 2. Navigate to the project directory: `cd my-portfolio`
 3. Install the dependencies: `npm install`
 
+Make sure you have the following package installed on your machine.
+
+- [node](https://nodejs.org/en/download)
+
 ## Usage
 
 To start the development server, run: `npm run dev`
