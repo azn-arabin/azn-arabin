@@ -37,6 +37,7 @@ const Header = () => {
   };
 
   useEffect(() => {
+    handleScroll();
     Events.scrollEvent.register("begin", handleScroll);
     window.addEventListener("scroll", handleScroll);
 

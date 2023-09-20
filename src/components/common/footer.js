@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.imgContainer}>
-        <img src={"./images/me.jpg"} alt={"me"} />
+        <img src={"./images/me.png"} alt={"me"} />
       </div>
-      <span>Md. Asaduzzaman (Arabin)</span>
+      <span>Md. Asaduzzman (Arabin)</span>
       <SocialMedia />
       <span>© 2023 copyright all right reserved</span>
     </div>

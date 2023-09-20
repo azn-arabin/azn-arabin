@@ -13,7 +13,7 @@ const Home = () => {
   const [currentLine, cycleLines] = useCycle(...homeContent);
 
   const handleDownload = () => {
-    window.location.href = "./files/Md. Asaduzzaman.pdf";
+    window.location.href = "./files/Md. Asaduzzman.pdf";
     logEvent(analytics, "resume_downloaded");
   };
 
@@ -24,7 +24,7 @@ const Home = () => {
       <div className={styles.leftSide}>
         <div className={styles.content}>
           <h4>Hello, I am</h4>
-          <h3>Md. Asaduzzaman (Arabin)</h3>
+          <h3>Md. Asaduzzman (Arabin)</h3>
           <div className={styles.animation}>
             <motion.h4
               initial={{ opacity: 0, y: -20 }}

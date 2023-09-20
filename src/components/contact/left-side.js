@@ -15,7 +15,7 @@ const LeftSide = () => {
       </h4>
       <div className={styles.suggestion}>
         <div className={styles.logo}>
-          <UilCommentAltDots color={"var(--selected-color"} />
+          <UilCommentAltDots color={"var(--text-color"} />
         </div>
         <div className={styles.details}>
           <span>Chat with me</span>
@@ -25,7 +25,7 @@ const LeftSide = () => {
       </div>
       <div className={styles.suggestion}>
         <div className={styles.logo}>
-          <UilWhatsapp color={"var(--selected-color"} />
+          <UilWhatsapp color={"var(--text-color"} />
         </div>
         <div className={styles.details}>
           <span>WhatsApp me</span>
@@ -43,7 +43,7 @@ const LeftSide = () => {
       </div>
       <div className={styles.suggestion}>
         <div className={styles.logo}>
-          <UilOutgoingCall color={"var(--selected-color"} />
+          <UilOutgoingCall color={"var(--text-color"} />
         </div>
         <div className={styles.details}>
           <span>Call me</span>

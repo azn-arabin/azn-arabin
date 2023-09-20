@@ -22,22 +22,22 @@ const sSize = 18;
 export const socials = [
   {
     icon: <UilGithub size={sSize} />,
-    link: "https://github.com/Arabin1",
+    link: "https://github.com/azn-arabin",
     name: "GitHub",
   },
   {
     icon: <UilLinkedin size={sSize} />,
-    link: "https://www.linkedin.com/in/as-arabin/",
+    link: "https://www.linkedin.com/in/azn-arabin/",
     name: "LinkedIn",
   },
   {
     icon: <UilFacebook size={sSize} />,
-    link: "https://www.facebook.com/mbd.asaduzzaman.arabin/",
+    link: "https://www.facebook.com/azn.arabin/",
     name: "Facebook",
   },
   {
     icon: <UilInstagram size={sSize} />,
-    link: "https://www.instagram.com/md_arabin_islam/?hl=en",
+    link: "https://www.instagram.com/azn_arabin/?hl=en",
     name: "Instagram",
   },
 ];
@@ -70,7 +70,7 @@ export const experiences = [
 export const educations = [
   {
     degree: "B.Sc. in Electrical & Electronic Engineering",
-    institution: "Rajshahi University",
+    institution: "University of Rajshahi",
     description:
       "As my academic background lies in engineering, I have dedicated my time and efforts to pursuing my interest in the world of software and mobile development through self-study and practical projects.",
     duration: "Jan, 2018 - Present",
@@ -176,8 +176,40 @@ export const projects = [
     ],
     tech: ["MERN", "Socket.io", "Redux", "MUI"],
     completedAt: "June, 2023",
-    source: "https://github.com/Arabin1/Chat_Application",
+    source: "https://github.com/azn-arabin/Chat_Application",
     visit: "https://chatvista.vercel.app/",
+  },
+  {
+    name: "Demographic Visualization",
+    type: "Web Application",
+    description:
+        "This is an undergraduate level project developed" +
+        " as part of the academic curriculum in the Department" +
+        " of Electrical and Electronic Engineering at " +
+        "University of Rajshahi.The project aims to provide a user-friendly" +
+        " platform for projecting the total population of Bangladesh " +
+        "based on user inputs.",
+    thumb: "./images/projects/demography/thumb.png",
+    screenshots: [
+      "./images/projects/demography/thumb.png",
+      "./images/projects/demography/demography-1.png",
+      "./images/projects/demography/demography-2.png",
+      "./images/projects/demography/demography-3.png",
+      "./images/projects/demography/demography-4.png",
+      "./images/projects/demography/demography-5.png",
+    ],
+    tech: [
+      "NextJS",
+      "MongoDB",
+      "React-Leaflet",
+      "React-Recharts",
+      "SendGrid",
+      "Framer-motion",
+      "Firebase",
+    ],
+    completedAt: "August, 2023",
+    source: "https://github.com/azn-arabin/demography",
+    visit: "https://demographybd.vercel.app",
   },
   {
     name: "Portfolio",
@@ -202,27 +234,8 @@ export const projects = [
       "Firebase",
     ],
     completedAt: "July, 2023",
-    source: "https://github.com/Arabin1/my-portfolio",
+    source: "https://github.com/azn-arabin/my-portfolio",
     visit: "https://arabin.vercel.app",
-  },
-  {
-    name: "Restaurant Frontend",
-    type: "Website",
-    description:
-      "Indulge in a captivating frontend design" +
-      " for a seafood-focused restaurant website, " +
-      "showcasing the irresistible allure of oceanic flavors.",
-    thumb: "./images/projects/restaurant/restaurant-1.png",
-    screenshots: [
-      "./images/projects/restaurant/restaurant-1.png",
-      "./images/projects/restaurant/restaurant-2.png",
-      "./images/projects/restaurant/restaurant-3.png",
-      "./images/projects/restaurant/restaurant-4.png",
-    ],
-    tech: ["HTML", "CSS", "JavaScript"],
-    completedAt: "April, 2021",
-    source: "https://github.com/Arabin1/Restaurant",
-    visit: "https://arabin1.github.io/Restaurant",
   },
   {
     name: "Result App",
@@ -230,7 +243,7 @@ export const projects = [
     description:
       "Experience the convenience of accessing " +
       "all the results of my batch in the EEE " +
-      "Department at Rajshahi University through " +
+      "Department at University of Rajshahi through " +
       "this Android app.",
     thumb: "./images/projects/result/thumb.png",
     screenshots: [
@@ -240,7 +253,7 @@ export const projects = [
     ],
     tech: ["React Native", "Firebase"],
     completedAt: "June, 2022",
-    source: "https://github.com/Arabin1/Result_EEE",
+    source: "https://github.com/azn-arabin/Result_EEE",
     visit:
       "https://drive.google.com/drive/u/0/folders/1DO7sw2UpxEPFb5r26uhprUtcqnJILRGn",
   },
@@ -257,7 +270,7 @@ export const projects = [
     ],
     tech: ["Java", "Firebase"],
     completedAt: "January, 2021",
-    source: "https://github.com/Arabin1/Snake_Game_Android",
+    source: "https://github.com/azn-arabin/Snake_Game_Android",
     visit:
       "https://docs.google.com/uc?export=download&id=1DDufJ2A8cUfyBKaauZbH0OrZa_gb9TIV",
   },
@@ -275,7 +288,7 @@ export const projects = [
     ],
     tech: ["Java", "Firebase"],
     completedAt: "February, 2021",
-    source: "https://github.com/Arabin1/Tic-Tac-Toe",
+    source: "https://github.com/azn-arabin/Tic-Tac-Toe",
     visit:
       "https://docs.google.com/uc?export=download&id=1CSqHteY8uotDMXDttxdnTQQcXM3gdZ3D",
   },

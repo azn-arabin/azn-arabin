@@ -57,7 +57,7 @@ This project utilizes the following dependencies:
 
 ## Contact
 
-For any inquiries or collaboration opportunities, feel free to reach out to me [Md. Asaduzzaman (Arabin)](mailto:aznarabin@gmail.com).
+For any inquiries or collaboration opportunities, feel free to reach out to me [Md. Asaduzzman (Arabin)](mailto:aznarabin@gmail.com).
 
 ## License
 

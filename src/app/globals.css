@@ -17,8 +17,8 @@ a {
   --second-bg: #f8fafd;
   --header-bg: #f3f6fc;
   --hover-color: #dce6f9;
-  --logo-bg: #001d35;
-  --logo-color: #c2e7ff;
+  --logo-bg: #c2e7ff;
+  --logo-color: #444746;
   --text-color: #444746;
   --button-hover: #8ac3e7;
   --selected-color: #c2e7ff;
@@ -34,8 +34,8 @@ a {
   --second-bg: #28292a;
   --header-bg: #2d2f31;
   --hover-color: #404345;
-  --logo-bg: #c2e7ff;
-  --logo-color: #004a77;
+  --logo-bg: #004a77;
+  --logo-color: #c4c7c5;
   --text-color: #c4c7c5;
   --button-hover: #005f8d;
   --selected-color: #004a77;
