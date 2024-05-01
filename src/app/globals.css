@@ -1,16 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box !important;
-}
-
-a {
-  text-decoration: none !important;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --main-bg: #fff;
@@ -44,6 +34,22 @@ a {
   --gray: #34363a;
   --scrollbar-bg: #333333;
   --scrollbar-thumb: #555555;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--main-bg);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 ::-webkit-scrollbar {

@@ -1,8 +1,10 @@
+"use client";
+
 import React, { useState } from "react";
 import styles from "../styles/portfolio.module.css";
 import Layout from "@/components/common/layout";
 import Title from "@/components/common/title";
-import { projects } from "@/contants";
+import { projects } from "src/constants";
 import { UilEye, UilInfoCircle } from "@iconscout/react-unicons";
 import Tooltip from "@/components/common/tooltip";
 import Details from "@/components/portfolio/details";

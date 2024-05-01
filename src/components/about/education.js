@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/about.module.css";
-import { educations } from "@/contants";
+import { educations } from "src/constants";
 import { UilGraduationCap } from "@iconscout/react-unicons";
 
 const Education = () => {

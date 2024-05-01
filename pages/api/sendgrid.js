@@ -1,5 +1,5 @@
 import sendgrid from "@sendgrid/mail";
-import { htmlCode, validateInputs } from "../../src/helpers/sendgrid";
+import { htmlCode, validateInputs } from "@/lib/helpers/sendgrid";
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 

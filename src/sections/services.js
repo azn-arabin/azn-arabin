@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 import styles from "../styles/servies.module.css";
 import Layout from "@/components/common/layout";
 import Title from "@/components/common/title";
-import { services } from "@/contants";
+import { services } from "src/constants";
 
 const Services = () => {
   return (

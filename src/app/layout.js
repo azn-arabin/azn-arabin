@@ -1,7 +1,9 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
-import { ThemeProvider } from "@/context/context";
+import { interFont } from "@/config/font.config";
+import Providers from "@/components/providers";
+import HandleTheme from "@/components/navigation/HandleTheme";
 
 export const metadata = {
   title: "Arabin - Full Stack Developer",
@@ -12,8 +14,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" className={interFont.className}>
+      <Providers>
+        <HandleTheme>{children}</HandleTheme>
+      </Providers>
     </html>
   );
 }

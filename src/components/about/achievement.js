@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/about.module.css";
-import { achievements } from "@/contants";
+import { achievements } from "src/constants";
 
 const Achievement = () => {
   return (

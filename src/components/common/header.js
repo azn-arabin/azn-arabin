@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/common.module.css";
 import { Container } from "react-bootstrap";
@@ -10,21 +11,16 @@ import {
   UilSun,
   UilTimes,
 } from "@iconscout/react-unicons";
-import { useContext } from "react";
-import { themeContext } from "@/context/context";
+import { useTheme } from "@/context/theme.context";
 import Tooltip from "@/components/common/tooltip";
 import Navs from "@/components/common/navs";
 import { motion } from "framer-motion";
+import { THEMES } from "@/constants/ui.constants";
 
 const Header = () => {
-  const theme = useContext(themeContext);
-  const darkTheme = theme.state.darkTheme;
+  const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [showNavs, setShowNavs] = useState(false);
-
-  const handleClick = () => {
-    theme.dispatch({ type: "THEME_CHANGED" });
-  };
 
   const handleScroll = () => {
     const scrollOffset = window.scrollY;
@@ -76,14 +72,20 @@ const Header = () => {
         <div className={styles.rightSide}>
           <Tooltip
             tooltip={
-              darkTheme ? "Switch to light theme" : "Switch to dark theme"
+              theme === THEMES.DARK
+                ? "Switch to light theme"
+                : "Switch to dark theme"
             }
           >
-            <div className={styles.toggle} onClick={handleClick}>
+            <div className={styles.toggle} onClick={toggleTheme}>
               <UilMoon color={"var(--text-color)"} size={18} />
               <UilSun color={"var(--text-color)"} size={18} />
               <div
-                className={darkTheme ? styles.tButtonDark : styles.tButtonLight}
+                className={
+                  theme === THEMES.DARK
+                    ? styles.tButtonDark
+                    : styles.tButtonLight
+                }
               />
             </div>
           </Tooltip>

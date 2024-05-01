@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/common.module.css";
-import { socials } from "@/contants";
+import { socials } from "src/constants";
 import Tooltip from "@/components/common/tooltip";
 
 const SocialMedia = () => {

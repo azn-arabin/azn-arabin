@@ -55,7 +55,7 @@ export const achievements = [
 
 export const experiences = [
   {
-    company: "Utronics",
+    company: "Utronics Ltd.",
     duration: "Nov 2021 – Feb 2022",
     position: "Internship",
     description:
@@ -64,6 +64,18 @@ export const experiences = [
       "cricket-based project. I gained valuable" +
       " experience and hands-on knowledge in" +
       " developing and implementing key functionalities.",
+  },
+  {
+    company: "SoftNursery Ltd.",
+    duration: "Nov 2023 – Present",
+    position: "Junior Software Engineer",
+    description:
+      "Employed as a Junior Software Engineer, " +
+      "specializing in Next.js within an e-commerce " +
+      "project. Extensive experience with Next.js, " +
+      "including NextIntl and Three.js libraries. " +
+      "Primarily focused on frontend development" +
+      " while also contributing to backend tasks.",
   },
 ];
 
@@ -183,12 +195,12 @@ export const projects = [
     name: "Demographic Visualization",
     type: "Web Application",
     description:
-        "This is an undergraduate level project developed" +
-        " as part of the academic curriculum in the Department" +
-        " of Electrical and Electronic Engineering at " +
-        "University of Rajshahi.The project aims to provide a user-friendly" +
-        " platform for projecting the total population of Bangladesh " +
-        "based on user inputs.",
+      "This is an undergraduate level project developed" +
+      " as part of the academic curriculum in the Department" +
+      " of Electrical and Electronic Engineering at " +
+      "University of Rajshahi.The project aims to provide a user-friendly" +
+      " platform for projecting the total population of Bangladesh " +
+      "based on user inputs.",
     thumb: "./images/projects/demography/thumb.png",
     screenshots: [
       "./images/projects/demography/thumb.png",

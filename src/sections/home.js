@@ -4,10 +4,10 @@ import styles from "../styles/home.module.css";
 import { Container } from "react-bootstrap";
 import SocialMedia from "@/components/common/social-media";
 import { motion, useCycle } from "framer-motion";
-import { homeContent } from "@/contants";
+import { homeContent } from "src/constants";
 import { UilDownloadAlt } from "@iconscout/react-unicons";
-import { analytics } from "@/app/page";
 import { logEvent } from "firebase/analytics";
+import { analytics } from "@/components/providers";
 
 const Home = () => {
   const [currentLine, cycleLines] = useCycle(...homeContent);

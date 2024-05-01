@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "../../styles/common.module.css";
 import SocialMedia from "@/components/common/social-media";
@@ -10,7 +12,7 @@ const Footer = () => {
       </div>
       <span>Md. Asaduzzman (Arabin)</span>
       <SocialMedia />
-      <span>© 2023 copyright all right reserved</span>
+      <span>© 2024 copyright all right reserved</span>
     </div>
   );
 };
