@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import styles from "../../styles/about.module.css";
-import { skills } from "src/constants";
+import styles from "../../../styles/about.module.css";
+import { skills } from "@/constants";
 import { motion } from "framer-motion";
 
 const Skills = () => {

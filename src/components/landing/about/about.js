@@ -1,13 +1,11 @@
-"use client";
-
 import React from "react";
 import Layout from "@/components/common/layout";
-import Title from "@/components/about/title";
-import styles from "../styles/about.module.css";
-import Achievement from "@/components/about/achievement";
-import Experience from "@/components/about/experience";
-import Skills from "@/components/about/skills";
-import Education from "@/components/about/education";
+import Title from "@/components/landing/about/title";
+import styles from "../../../styles/about.module.css";
+import Achievement from "@/components/landing/about/achievement";
+import Experience from "@/components/landing/about/experience";
+import Skills from "@/components/landing/about/skills";
+import Education from "@/components/landing/about/education";
 
 const About = () => {
   return (

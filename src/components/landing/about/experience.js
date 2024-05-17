@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../../styles/about.module.css";
-import { experiences } from "src/constants";
+import styles from "../../../styles/about.module.css";
+import { experiences } from "@/constants";
 import { UilBag } from "@iconscout/react-unicons";
 
 const Experience = () => {

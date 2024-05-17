@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../styles/common.module.css";
-import { Container } from "react-bootstrap";
+import { AppContainer } from "@/components/common/client-components";
 
 const Layout = ({ children }) => {
-  return <Container className={styles.layout}>{children}</Container>;
+  return <AppContainer className={styles.layout}>{children}</AppContainer>;
 };
 export default Layout;

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import styles from "../../styles/common.module.css";
 import SocialMedia from "@/components/common/social-media";

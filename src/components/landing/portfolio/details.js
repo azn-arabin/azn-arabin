@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../styles/portfolio.module.css";
+import styles from "../../../styles/portfolio.module.css";
 import { Carousel, Modal } from "react-bootstrap";
 import {
   UilCheck,

@@ -47,16 +47,6 @@
   border: 2px solid var(--border-color);
 }
 
-.achievement > :nth-of-type(1) {
-  font-weight: bold;
-  font-size: 35px;
-}
-
-.achievement > :nth-of-type(2) {
-  font-weight: 400;
-  font-size: 14px;
-}
-
 .divider {
   border: none;
   height: 1px;
@@ -123,9 +113,9 @@
 
 .rightSide {
   display: flex;
-  flex: 1;
   flex-direction: column;
   gap: 20px;
+  flex: 1;
 }
 
 .skills {
@@ -133,8 +123,9 @@
   flex-direction: column;
   gap: 30px;
   margin-top: 10px;
-  max-height: 320px;
+  height: 500px;
   overflow-y: auto;
+  padding-right: 10px;
 }
 
 .skill {
@@ -148,14 +139,6 @@
 
 .skills::-webkit-scrollbar {
   width: 0.5em;
-}
-
-.skills::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.skills::-webkit-scrollbar-thumb {
-  background-color: transparent;
 }
 
 .skills:hover::-webkit-scrollbar {

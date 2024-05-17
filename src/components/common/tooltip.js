@@ -1,3 +1,5 @@
+"use client";
+
 import { OverlayTrigger, Tooltip as BTooltip } from "react-bootstrap";
 
 export default function Tooltip({

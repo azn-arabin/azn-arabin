@@ -45,11 +45,11 @@ export const socials = [
 export const achievements = [
   {
     name: "Years of Experience",
-    amount: 2,
+    amount: 3,
   },
   {
     name: "Project Completed",
-    amount: 10,
+    amount: 15,
   },
 ];
 
@@ -113,6 +113,10 @@ export const skills = [
   {
     name: "Laravel",
     percentage: 85,
+  },
+  {
+    name: "ThreeJS",
+    percentage: 60,
   },
   {
     name: "HTML",

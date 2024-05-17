@@ -7,8 +7,8 @@
     <img src="https://wakatime.com/badge/user/ca503dc7-88e0-464f-bd4b-77b46a0e18ae.svg" alt="Total time coded since May 16 2024" />
   </a>
   <img src="https://komarev.com/ghpvc/?username=azn-arabin&color=0e75b6" alt="Profile Views"  />
-  <a href="https://leetcode.com/azn-arabin/">
-    <img src="https://img.shields.io/badge/dynamic/json?style=flat-square&amp;labelColor=black&amp;color=%23ffa116&amp;label=Solved&amp;query=solvedOverTotal&amp;url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fazn-arabin&amp;logo=leetcode&amp;logoColor=yellow" alt="LeetCode user ananta_joy" />
+  <a href="https://leetcode.com/azn-arabin/"    target="_blank">
+    <img src="https://img.shields.io/badge/dynamic/json?style=flat-square&amp;labelColor=black&amp;color=%23ffa116&amp;label=Solved&amp;query=solvedOverTotal&amp;url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fazn-arabin&amp;logo=leetcode&amp;logoColor=yellow" alt="LeetCode user azn-arabin" />
   </a>
 </div>
 

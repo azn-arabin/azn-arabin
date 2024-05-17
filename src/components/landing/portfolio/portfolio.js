@@ -1,18 +1,13 @@
-"use client";
-
-import React, { useState } from "react";
-import styles from "../styles/portfolio.module.css";
+import React from "react";
+import styles from "../../../styles/portfolio.module.css";
 import Layout from "@/components/common/layout";
 import Title from "@/components/common/title";
-import { projects } from "src/constants";
+import { projects } from "@/constants";
 import { UilEye, UilInfoCircle } from "@iconscout/react-unicons";
 import Tooltip from "@/components/common/tooltip";
-import Details from "@/components/portfolio/details";
+import { DetailsButton } from "@/components/landing/portfolio/client-components";
 
 const Portfolio = () => {
-  const [details, setDetails] = useState(false);
-  const [project, setProject] = useState({});
-
   return (
     <div id="portfolio" className={styles.wrapper}>
       <Layout>
@@ -27,15 +22,9 @@ const Portfolio = () => {
                   </div>
                   <div className={styles.hoverOn}>
                     <Tooltip tooltip={"Info"}>
-                      <button
-                        className={"button"}
-                        onClick={() => {
-                          setDetails(true);
-                          setProject(project);
-                        }}
-                      >
+                      <DetailsButton projectProps={project}>
                         <UilInfoCircle color={"var(--text-color)"} />
-                      </button>
+                      </DetailsButton>
                     </Tooltip>
                     <Tooltip tooltip={"Live preview"}>
                       <a
@@ -54,7 +43,6 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
-        <Details show={details} setShow={setDetails} project={project} />
       </Layout>
     </div>
   );
