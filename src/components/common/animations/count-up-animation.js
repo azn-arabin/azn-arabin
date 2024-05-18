@@ -38,7 +38,7 @@ const CountUpAnimation = ({ startValue = 0, endValue }) => {
     }
   }, [isInView]);
 
-  return <motion.h2 ref={containerRef}>{Math.abs(currentValue)}</motion.h2>;
+  return <motion.span ref={containerRef}>{Math.abs(currentValue)}</motion.span>;
 };
 
 export default CountUpAnimation;

@@ -8,7 +8,7 @@ const Achievement = () => {
     <div className={styles.achievements}>
       {achievements.map((achievement, id) => (
         <div className={styles.achievement} key={id}>
-          <div className="flex flex-row gap-1 font-bold text-4xl">
+          <div className="flex flex-row gap-1 font-bold text-4xl xs:text-4xl">
             <CountUpAnimation startValue={-100} endValue={achievement.amount} />
             <span>+</span>
           </div>

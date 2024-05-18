@@ -210,15 +210,6 @@
     font-size: 14px;
   }
 
-  .achievement > :nth-of-type(1) {
-    font-size: 30px;
-  }
-
-  .achievement > :nth-of-type(2) {
-    font-weight: 400;
-    font-size: 13px;
-  }
-
   .skill {
     font-size: 15px;
   }
