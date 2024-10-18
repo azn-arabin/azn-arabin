@@ -34,8 +34,7 @@ export const StackAnimation = ({ children, content }) => {
 
 export const DownloadCVButton = ({ children }) => {
   const handleDownload = () => {
-    const url =
-      "https://drive.google.com/file/d/1dlL_VBzSb_GbfvGhsRcyIfgjhvudreiG/view?usp=sharing";
+    const url = process.env.NEXT_PUBLIC_CV_LINK;
     const newTab = window.open(url, "_blank");
     if (newTab) {
       newTab.focus(); // Focus on the new tab if it was successfully opened
