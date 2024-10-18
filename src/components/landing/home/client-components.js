@@ -34,13 +34,13 @@ export const StackAnimation = ({ children, content }) => {
 
 export const DownloadCVButton = ({ children }) => {
   const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href =
-      "https://drive.google.com/uc?export=download&id=1dlL_VBzSb_GbfvGhsRcyIfgjhvudreiG";
-    link.download = "Md. Asaduzzman.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const url =
+      "https://drive.google.com/file/d/1dlL_VBzSb_GbfvGhsRcyIfgjhvudreiG/view?usp=sharing";
+    const newTab = window.open(url, "_blank");
+    if (newTab) {
+      newTab.focus(); // Focus on the new tab if it was successfully opened
+    }
+
     logEvent(analytics, "resume_downloaded");
   };
 
