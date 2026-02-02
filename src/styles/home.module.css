@@ -1,139 +1,438 @@
 .wrapper {
-  flex: 1;
+  min-height: 85vh; /* Optimal height for hero */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
   position: relative;
-  gap: 50px;
-  padding: 100px 20px;
 }
 
-.wrapper > * {
-  z-index: 1;
-}
+/* Background mesh or grid if desired - keeping it simple for now */
 
-.leftSide {
+.contentSection {
   flex: 1;
-  gap: 22px;
+  max-width: 650px;
+  z-index: 10;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 1.5rem;
   align-items: flex-start;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
+.badge {
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
-  align-items: flex-start;
-  width: 400px;
-  text-align: left;
+  padding: 6px 12px;
+  background: color-mix(in srgb, var(--selected-color) 20%, transparent);
+  border: 1px solid var(--selected-color);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-color);
 }
 
-.content > h4 {
-  padding: 0;
+.badgePulse {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
   margin: 0;
+  color: var(--text-color);
 }
 
-.content > h3 {
-  padding: 0;
-  margin: 0;
-  font-weight: bold;
+.highlight {
+  background: linear-gradient(
+    120deg,
+    var(--selected-color) 0%,
+    var(--button-hover) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.content > span {
-  font-weight: 400;
-  font-size: 15px;
-  text-align: left;
-  line-height: 1.6;
+.subHeading {
+  display: block;
+  font-size: 0.5em; /* relative to heading */
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.7;
+  letter-spacing: 0.05em;
+  margin-top: 10px;
+  text-transform: uppercase;
+  min-height: 40px; /* Prevent layout shift during animation */
 }
 
-.animation {
+.description {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.9;
+  max-width: 500px;
+}
+
+.description strong {
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 1;
+}
+
+.actions {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
-.animation > h4 {
-  margin: 0;
-  padding: 0;
+/* Using generic button styles or defining new ones */
+.outlineButton {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  background: transparent;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.rightSide {
+.outlineButton:hover {
+  transform: translateY(-2px);
+  border-color: var(--selected-color);
+  background: color-mix(in srgb, var(--selected-color) 10%, transparent);
+}
+
+.socialsWrapper {
+  margin-top: 1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.socialsWrapper:hover {
+  opacity: 1;
+}
+
+.statsContainer {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-color);
+}
+
+/* Right Side - Code Window */
+.visualSection {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
+  z-index: 10;
+  min-width: 300px;
 }
 
-.shape {
-  width: 500px;
-  height: 400px;
-  border-radius: 20px;
-  background-color: var(--selected-color);
+.codeWindow {
+  width: 100%;
+  max-width: 520px;
+  background: var(--second-bg); /* Use theme bg for window background */
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: "Fira Code", "Roboto Mono", monospace, sans-serif;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-height: 400px; /* Increased height */
+}
+
+.codeWindow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+}
+
+.windowHeader {
+  background: color-mix(in srgb, var(--border-color) 20%, transparent);
+  padding: 16px 20px;
   display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-color);
   align-items: center;
-  justify-content: center;
 }
 
-.image {
-  width: 300px;
-  height: auto;
-  object-fit: contain;
+.headerTitle {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-left: auto;
+  font-family: sans-serif;
 }
 
-.blur1 {
-  background-color: rgba(255, 167, 38, 0.15);
-  position: absolute;
-  width: 50%;
-  height: 70%;
+.dot {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  filter: blur(72px);
-  top: 18%;
-  left: -20%;
 }
 
-.blur2 {
-  background-color: rgba(77, 255, 172, 0.15);
+.windowBody {
+  padding: 30px 28px;
+  overflow-x: hidden; /* Hide scrollbar if possible */
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.codeLine {
+  color: var(--text-color);
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 14px;
+  align-items: baseline;
+}
+
+.lineNumber {
+  display: inline-block;
+  width: 28px;
+  opacity: 0.3;
+  user-select: none;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.codeText {
+  white-space: pre;
+  overflow: hidden;
+}
+
+.indent1 {
+  padding-left: 20px;
+}
+
+.indent2 {
+  padding-left: 40px;
+}
+
+/* Syntax Highlighting Colors - adapting to generic theme */
+.kwd {
+  color: #d73a49;
+} /* Keyword - Red-ish */
+.var {
+  color: #6f42c1;
+} /* Variable - Purple */
+.str {
+  color: #032f62;
+} /* String - Blue */
+.prop {
+  color: #005cc5;
+} /* Property - Light Blue */
+.bool {
+  color: #0086b3;
+} /* Boolean - Cyan */
+.fn {
+  color: #6f42c1;
+} /* Function - Purple */
+.comment {
+  color: #6a737d;
+  font-style: italic;
+}
+.bracket {
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  /* These specific colors might fight with the app's theme-dark class strategy. 
+       We will rely on the app's global css to switch .content via the :global(.theme-dark) strategy if strict adherence is needed.
+       However, since this is a module, we can use global selectors if needed, or better, 
+       just assume the 'var(--text-color)' handles the base and provide mostly compatible syntax colors.
+       Or, explicitly handle the dark theme class if it wraps this.
+    */
+}
+
+:global(.theme-dark) .kwd {
+  color: #ff7b72;
+}
+:global(.theme-dark) .var {
+  color: #d2a8ff;
+}
+:global(.theme-dark) .str {
+  color: #a5d6ff;
+}
+:global(.theme-dark) .prop {
+  color: #79c0ff;
+}
+:global(.theme-dark) .bool {
+  color: #79c0ff;
+}
+:global(.theme-dark) .fn {
+  color: #d2a8ff;
+}
+:global(.theme-dark) .comment {
+  color: #8b949e;
+}
+
+.glowEffect {
   position: absolute;
-  width: 50%;
-  height: 70%;
-  border-radius: 50%;
-  filter: blur(72px);
-  top: 10%;
-  right: -20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(
+    circle,
+    var(--selected-color) 0%,
+    transparent 65%
+  );
+  opacity: 0.12;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(60px);
 }
 
-@media (max-width: 991px) {
+/* Mobile Responsive */
+@media (max-width: 960px) {
   .wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    padding-top: 2rem;
+    gap: 3rem;
+    text-align: center;
+    justify-content: center;
   }
 
-  .rightSide {
-    display: none;
-  }
-}
-
-@media (max-width: 599px) {
-  .wrapper {
-    padding: 100px 20px;
+  .contentSection {
+    align-items: center;
+    max-width: 100%;
   }
 
-  .content {
-    width: auto;
+  .heading {
+    font-size: 2.5rem;
   }
 
-  .blur1 {
-    left: 0;
+  .subHeading {
+    margin-top: 5px;
   }
 
-  .blur2 {
-    right: 0;
+  .description {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .outlineButton {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .statsContainer {
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .visualSection {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .codeWindow {
+    width: 100%;
+    max-width: 100%;
+    font-size: 11px; /* Smaller font for mobile code */
+  }
+
+  .windowBody {
+    padding: 16px;
+  }
+
+  .lineNumber {
+    width: 15px;
+    margin-right: 8px;
   }
 }
 
 @media (max-width: 400px) {
-  .content > span {
-    font-size: 14px;
+  .wrapper {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+    gap: 2.2rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+    line-height: 1.12;
+  }
+
+  .subHeading {
+    font-size: 0.48em;
+    min-height: 34px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .actions :global(.button) {
+    width: 100%;
+  }
+
+  .outlineButton {
+    width: 100%;
+    max-width: none;
   }
 }

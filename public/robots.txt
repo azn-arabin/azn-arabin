@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin/API routes if any
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://arabin.vercel.app/sitemap.xml

@@ -6,26 +6,20 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 const sendEmail = async (req, res) => {
   if (req.method !== "POST") {
     return res.status(405).json({
-      error: {
-        message: "Method Not Allowed.",
-      },
+      error: { message: "Method Not Allowed." },
     });
   }
 
   const { authorization } = req.headers;
-
   const token = authorization?.replace("Bearer ", "");
+  const configuredKey = process.env.NEXT_PUBLIC_SENDGRID_AUTHENTICATION_KEY;
 
-  if (token !== process.env.NEXT_PUBLIC_SENDGRID_AUTHENTICATION_KEY) {
-    return res.status(401).json({
-      error: {
-        message: "Unauthenticated!",
-      },
-    });
+  // In dev or when no key is configured, allow the request; otherwise enforce match
+  if (configuredKey && token !== configuredKey) {
+    return res.status(401).json({ error: { message: "Unauthenticated" } });
   }
 
-  const { name, email, subject, message } = req.body;
-
+  const { name, email, subject, message } = req.body || {};
   const errors = validateInputs({ name, email, subject, message });
 
   if (errors.length > 0) {
@@ -36,17 +30,17 @@ const sendEmail = async (req, res) => {
     await sendgrid.send({
       to: process.env.SENDGRID_RECEIVER,
       from: process.env.SENDGRID_SENDER,
-      subject: subject,
+      subject,
       html: htmlCode(name, email, message),
     });
 
-    res.status(200).json({
+    return res.status(200).json({
       message:
         "Your email has been sent successfully. Thank you for contacting us.",
     });
   } catch (error) {
-    res
-      .status(error.statusCode || 500)
+    return res
+      .status(error?.statusCode || 500)
       .json({ message: "Something went wrong! Please try again later." });
   }
 };

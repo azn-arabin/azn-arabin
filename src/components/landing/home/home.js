@@ -1,55 +1,168 @@
 import React from "react";
-import Image from "next/image";
 import styles from "../../../styles/home.module.css";
 import SocialMedia from "@/components/common/social-media";
-import { homeContent } from "@/constants";
 import {
   DownloadCVButton,
-  StackAnimation,
+  TypewriterEffect,
 } from "@/components/landing/home/client-components";
 import { AppContainer } from "@/components/common/client-components";
 
 const Home = () => {
   return (
     <AppContainer className={styles.wrapper} id={"home"}>
-      <div className={styles.blur1} />
-      <div className={styles.blur2} />
-      <div className={styles.leftSide}>
-        <div className={styles.content}>
-          <h4>Hello, I am</h4>
-          <h3>Md. Asaduzzman (Arabin)</h3>
-          <div className={styles.animation}>
-            <StackAnimation content={homeContent}>I am a</StackAnimation>
-          </div>
-          <span>
-            I collaborate with professionals and leaders who aspire to develop
-            careers that provide intellectual and financial fulfillment.
-          </span>
+      <div className={styles.contentSection}>
+        <div className={styles.badge}>
+          <span className={styles.badgePulse}></span>
+          Available for new projects
         </div>
-        <a
-          href="https://leetcode.com/azn-arabin/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://img.shields.io/badge/dynamic/json?style=flat-square&amp;labelColor=black&amp;color=%23ffa116&amp;label=Solved&amp;query=solvedOverTotal&amp;url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fazn-arabin&amp;logo=leetcode&amp;logoColor=yellow"
-            alt="LeetCode user azn-arabin"
-          />
-        </a>
-        <DownloadCVButton>Download CV</DownloadCVButton>
-        <SocialMedia />
+
+        <h1 className={styles.heading}>
+          Hello, I&apos;m <span className={styles.highlight}>Arabin.</span>
+          <br />
+          <span className={styles.subHeading}>
+            <TypewriterEffect
+              texts={[
+                "Full Stack Developer",
+                "MERN Stack Developer",
+                "Next.js Developer",
+                "Laravel Developer",
+                "React Native Developer",
+              ]}
+            />
+          </span>
+        </h1>
+
+        <div className={styles.description}>
+          <p>
+            I build accessible, pixel-perfect, and performant web experiences.
+            Specializing in <strong>MERN stack</strong>,{" "}
+            <strong>Next.js</strong>, <strong>Laravel</strong>, and{" "}
+            <strong>React Native</strong>. I help businesses turn ideas into
+            shipping products.
+          </p>
+        </div>
+
+        <div className={styles.actions}>
+          <DownloadCVButton>Download CV</DownloadCVButton>
+          <a href="#portfolio" className={styles.outlineButton}>
+            View Portfolio
+          </a>
+        </div>
+
+        <div className={styles.socialsWrapper}>
+          <SocialMedia />
+        </div>
+
+        <div className={styles.statsContainer}>
+          <div className={styles.statItem}>
+            <span className={styles.statValue}>3+</span>
+            <span className={styles.statLabel}>Years Exp.</span>
+          </div>
+          <div className={styles.statDivider}></div>
+          <div className={styles.statItem}>
+            <span className={styles.statValue}>20+</span>
+            <span className={styles.statLabel}>Projects</span>
+          </div>
+          <div className={styles.statDivider}></div>
+          <div className={styles.statItem}>
+            <span className={styles.statValue}>100%</span>
+            <span className={styles.statLabel}>Commitment</span>
+          </div>
+        </div>
       </div>
-      <div className={styles.rightSide}>
-        <div className={styles.shape}>
-          <Image
-            src="/images/laptop.png"
-            alt="laptop"
-            className={styles.image}
-            width={600}
-            height={500}
-            priority
-            quality={90}
-          />
+
+      <div className={styles.visualSection}>
+        <div className={styles.glowEffect}></div>
+        <div className={styles.codeWindow}>
+          <div className={styles.windowHeader}>
+            <div className={styles.dot} style={{ background: "#ff5f56" }}></div>
+            <div className={styles.dot} style={{ background: "#ffbd2e" }}></div>
+            <div className={styles.dot} style={{ background: "#27c93f" }}></div>
+            <span className={styles.headerTitle}>developer.config.js</span>
+          </div>
+          <div className={styles.windowBody}>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>1</span>
+              <span className={styles.codeText}>
+                <span className={styles.kwd} style={{ marginRight: "8px" }}>
+                  const
+                </span>
+                <span className={styles.var}>profile</span> ={" "}
+                <span className={styles.bracket}>{`{`}</span>
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>2</span>
+              <span className={`${styles.codeText} ${styles.indent1}`}>
+                <span className={styles.prop}>name</span>:{" "}
+                <span className={styles.str}>"Md. Asaduzzman"</span>,
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>3</span>
+              <span className={`${styles.codeText} ${styles.indent1}`}>
+                <span className={styles.prop}>role</span>:{" "}
+                <span className={styles.str}>"Full Stack Developer"</span>,
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>4</span>
+              <span className={`${styles.codeText} ${styles.indent1}`}>
+                <span className={styles.prop}>stack</span>:{" "}
+                <span className={styles.bracket}>[</span>
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>5</span>
+              <span className={`${styles.codeText} ${styles.indent2}`}>
+                <span className={styles.str}>"Next.js"</span>,{" "}
+                <span className={styles.str}>"React Native"</span>,{" "}
+                <span className={styles.str}>"Laravel"</span>
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>6</span>
+              <span className={`${styles.codeText} ${styles.indent1}`}>
+                <span className={styles.bracket}>]</span>,
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>7</span>
+              <span className={`${styles.codeText} ${styles.indent1}`}>
+                <span className={styles.prop}>hardWorker</span>:{" "}
+                <span className={styles.bool}>true</span>,
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>8</span>
+              <span className={`${styles.codeText} ${styles.indent1}`}>
+                <span className={styles.fn}>init</span>:{" "}
+                <span className={styles.kwd}>function</span>() {"{"}
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>9</span>
+              <span className={`${styles.codeText} ${styles.indent2}`}>
+                <span className={styles.kwd}>return</span>{" "}
+                <span className={styles.str}>
+                  "Let's build something amazing!"
+                </span>
+                ;
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>10</span>
+              <span className={`${styles.codeText} ${styles.indent1}`}>
+                {"}"}
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>11</span>
+              <span className={styles.codeText}>
+                <span className={styles.bracket}>{`}`}</span>;
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </AppContainer>

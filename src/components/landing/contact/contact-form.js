@@ -33,6 +33,16 @@ const ContactForm = () => {
     event.preventDefault();
     setLoading(true);
 
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      toastHandler(
+        "Web3Forms key is missing. Please set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.",
+        "error",
+      );
+      setLoading(false);
+      return;
+    }
+
     // Basic client-side validation (native required fields + a small guard)
     if (!data.name || !data.email || !data.subject || !data.message) {
       toastHandler("Please fill in all required fields.", "warning");
@@ -50,24 +60,34 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          ...data,
-          subject: `From Portfolio - ${data.subject}`,
-        }),
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_SENDGRID_AUTHENTICATION_KEY}`,
+          Accept: "application/json",
         },
-        method: "POST",
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: data.name,
+          email: data.email,
+          subject: `From Portfolio - ${data.subject}`,
+          message: data.message,
+          replyto: data.email,
+          botcheck: "",
+        }),
       });
 
-      if (response.status === 200) {
-        const result = await response.json();
-        toastHandler(result.message, "success");
+      const payload = await response.json().catch(() => ({}));
+
+      if (response.ok && payload?.success) {
+        toastHandler(payload?.message || "Message sent!", "success");
         setPrevMail(data.email);
+        setData({ name: "", email: "", subject: "", message: "" });
       } else {
-        toastHandler("Something went wrong! Please try again later.", "error");
+        toastHandler(
+          payload?.message || "Something went wrong! Please try again later.",
+          "error",
+        );
       }
     } catch (e) {
       toastHandler("Something went wrong! Please try again later.", "error");
@@ -97,6 +117,7 @@ const ContactForm = () => {
               placeholder="Your name..."
               maxLength={30}
               autoComplete="name"
+              disabled={loading}
             />
           </div>
           <div className={styles.field}>
@@ -110,6 +131,7 @@ const ContactForm = () => {
               onChange={handleOnChange}
               placeholder="Your email..."
               autoComplete="email"
+              disabled={loading}
             />
           </div>
         </div>
@@ -125,6 +147,7 @@ const ContactForm = () => {
             placeholder="Subject..."
             maxLength={80}
             autoComplete="off"
+            disabled={loading}
           />
         </div>
         <div className={styles.field}>
@@ -137,6 +160,7 @@ const ContactForm = () => {
             placeholder="Leave a message here..."
             required
             maxLength={600}
+            disabled={loading}
           />
         </div>
         <button
@@ -145,10 +169,14 @@ const ContactForm = () => {
             padding: "15px",
             marginTop: "5px",
           }}
-          className={"button"}
+          className={`button ${styles.submitButton}`}
           disabled={loading}
+          aria-busy={loading}
         >
-          {loading ? "Sending..." : "Send Message"}
+          <span className={styles.buttonInner}>
+            {loading && <span className={styles.spinner} aria-hidden />}
+            <span>{loading ? "Sending..." : "Send Message"}</span>
+          </span>
         </button>
         <ToastContainer />
       </form>

@@ -32,6 +32,71 @@ export const StackAnimation = ({ children, content }) => {
   );
 };
 
+export const TypewriterEffect = ({ texts }) => {
+  const [index, setIndex] = React.useState(0);
+  const [subIndex, setSubIndex] = React.useState(0);
+  const [reverse, setReverse] = React.useState(false);
+  const [blink, setBlink] = React.useState(true);
+
+  // Blinking cursor
+  React.useEffect(() => {
+    const timeout2 = setTimeout(() => {
+      setBlink((prev) => !prev);
+    }, 500);
+    return () => clearTimeout(timeout2);
+  }, [blink]);
+
+  // Typing logic
+  React.useEffect(() => {
+    if (index >= texts.length) {
+      setIndex(0); // Reset to first word
+      return;
+    }
+
+    const currentText = texts[index];
+    const speed = reverse ? 40 : 120; // Type slower (120), delete faster (40)
+
+    // If we finished typing the word
+    if (subIndex === currentText.length + 1 && !reverse) {
+      const timeout = setTimeout(() => {
+        setReverse(true);
+      }, 2000); // Wait 2s before deleting
+      return () => clearTimeout(timeout);
+    }
+
+    // If we finished deleting the word
+    if (subIndex === 0 && reverse) {
+      setReverse(false);
+      setIndex((prev) => (prev + 1) % texts.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (reverse ? -1 : 1));
+    }, Math.max(reverse ? 25 : speed, parseInt(Math.random() * 50))); // variance
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, reverse, texts]);
+
+  return (
+    <span style={{ display: "inline-flex", whiteSpace: "nowrap" }}>
+      {texts[index].substring(0, subIndex)}
+      <motion.span
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ repeat: Infinity, duration: 0.8 }}
+        style={{
+          display: "inline-block",
+          width: "2px",
+          height: "1.2em",
+          background: "currentColor",
+          marginLeft: "2px",
+          verticalAlign: "bottom",
+        }}
+      />
+    </span>
+  );
+};
+
 export const DownloadCVButton = ({ children }) => {
   const handleDownload = () => {
     const url = process.env.NEXT_PUBLIC_CV_LINK;
