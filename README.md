@@ -1,106 +1,83 @@
-<h1 align="center">Hey 👋, I'm Arabin</h1>
+<div align="center">
+  <h1>Hi there, I'm Arabin! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"></h1>
+  
+  <h3>Full Stack Developer | MERN  Next.js  Laravel  React Native</h3>
+  
+  <p>
+    I build accessible, pixel-perfect, and performant web experiences. <br/>
+    Passionate about creating elegant solutions to complex problems.
+  </p>
 
-<h3 align="center">A software craftsman from Dhaka, Bangladesh</h3>
-
-<div align="center" >
-  <a href="https://wakatime.com/@ca503dc7-88e0-464f-bd4b-77b46a0e18ae">
-    <img src="https://wakatime.com/badge/user/ca503dc7-88e0-464f-bd4b-77b46a0e18ae.svg" alt="Total time coded since May 16 2024" />
+  <a href="https://arabin.vercel.app">
+    <img src="https://img.shields.io/badge/Portfolio-Visit%20Site-blue?style=for-the-badge&logo=vercel" alt="Portfolio" />
   </a>
-  <img src="https://komarev.com/ghpvc/?username=azn-arabin&color=0e75b6" alt="Profile Views"  />
-  <a href="https://leetcode.com/azn-arabin/"    target="_blank">
-    <img src="https://img.shields.io/badge/dynamic/json?style=flat-square&amp;labelColor=black&amp;color=%23ffa116&amp;label=Solved&amp;query=solvedOverTotal&amp;url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fazn-arabin&amp;logo=leetcode&amp;logoColor=yellow" alt="LeetCode user azn-arabin" />
+  <a href="https://www.linkedin.com/in/azn-arabin">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+  </a>
+  <a href="mailto:aznarabin@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail" alt="Email" />
   </a>
 </div>
 
-<h3 align="center">I'm passionate about creating elegant solutions to complex problems and constantly pushing the boundaries of what's possible in technology.
-</h3>
+<br />
 
-- 👨‍💻 All of my projects are available at [arabin.vercel.app/#portfolio](https://arabin.vercel.app/#portfolio)
-- 🌱 I’m currently learning [DSA & competitive programing](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)
+##  About Me
 
-- 💬 Ask me about **Full stack development, DSA, and competitive programming**
+I am a software craftsman from **Dhaka, Bangladesh**. I collaborate with professionals and leaders who aspire to develop careers that provide intellectual and financial fulfillment.
 
-- 📫 How to reach me **[aznarabin@gmail.com](mailto:aznarabin@gmail.com)**
+-  Im currently working on scalable **Next.js** and **React Native** applications.
+-  Im currently mastering **DSA & System Design**.
+-  Ask me about **Full Stack Development, MERN, and Competitive Programming**.
+-  Fun fact: I love solving algorithmic challenges on LeetCode!
 
-- 📄 Know about my experiences [arabin.vercel.app](https://arabin.vercel.app)
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<p align="left">
-
-<a href="https://linkedin.com/in/azn-arabin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="azn-arabin" height="30" width="40" /></a>
-<a href="https://www.facebook.com/azn.arabin/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="azn-arabin" height="30" width="40" /></a>
-<a href="https://instagram.com/azn_arabin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="azn-arabin" height="30" width="40" /></a>
-
-</p>
-
-<h3 align="left">Languages and Tools:</h3>
-<p align="left">
-    <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/>
-    </a> 
-    <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/>
-    </a> 
-    <!-- Add your skills here -->
-    <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-        <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/>
-    </a>
-    <a href="https://reactnative.dev/" target="_blank" rel="noreferrer">
-        <img src="https://reactnative.dev/img/header_logo.svg" alt="react native" width="40" height="40"/>
-    </a>
-    <a href="https://www.php.net/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/php/php-icon.svg" alt="php" width="40" height="40"/>
-    </a>
-    <a href="https://laravel.com/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg" alt="laravel" width="40" height="40"/>
-    </a>
-    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="html" width="40" height="40"/>
-    </a>
-    <a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/netlifyapp_watercss/netlifyapp_watercss-icon.svg" alt="css" width="40" height="40"/>
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
-    </a>
-    <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/>
-    </a>
-<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a>
-    <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
-    </a>
-    <a href="https://expressjs.com" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/>
-    </a>
-    <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/>
-    </a>
-    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/>
-    </a>
-</p>
+##  Tech Stack
 
 <div align="center">
 
-  <!-- Top Languages -->
-
-<span><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=azn-arabin&show_icons=true&locale=en&layout=compact" alt="azn-arabin" /></span>
-
-  <!-- Overall Stats -->
-
-<span>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=azn-arabin&show_icons=true&locale=en" alt="azn-arabin" /></span>
-
-  <!-- Streak Stats -->
-
-<span><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=azn-arabin&" alt="azn-arabin" /></span>
+| Frontend | Backend | Mobile | Tools |
+| :------: | :-----: | :----: | :---: |
+| <img src="https://skillicons.dev/icons?i=react,nextjs,redux,tailwind,html,css,js,ts" width="300" /> | <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,firebase,laravel,mysql,php" width="260" /> | <img src="https://skillicons.dev/icons?i=react,androidstudio" width="80" /> | <img src="https://skillicons.dev/icons?i=git,github,vscode,figma,postman,vercel" width="220" /> |
 
 </div>
 
-### ✍️ Random Dev Quote
+##  GitHub Stats
 
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=azn-arabin&show_icons=true&theme=transparent&hide_border=true&title_color=0070f3&icon_color=0070f3" alt="Arabin's Github Stats" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=azn-arabin&layout=compact&theme=transparent&hide_border=true&title_color=0070f3" alt="Top Languages" height="150" />
+</div>
 
-<h3 align="left">✍️ Fun Fact</h3>
-<p style="background-color: #f0f0f0; padding: 10px; color:black; border-radius: 5px">I can solve a Rubik's cube in under a minute!</p>
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=azn-arabin&theme=flat&no-frame=true&margin-w=15" alt="trophies" />
+</div>
+
+##  LeetCode Stats
+
+<div align="center">
+  <a href="https://leetcode.com/azn-arabin/">
+    <img src="https://leetcode-stats-six.vercel.app/?username=azn-arabin&theme=light" alt="LeetCode Stats" width="80%" />
+  </a>
+</div>
+
+##  Connect with me
+
+<div align="center">
+  <a href="https://linkedin.com/in/azn-arabin" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://facebook.com/azn.arabin" target="_blank">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" />
+  </a>
+  <a href="https://instagram.com/azn_arabin" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+  </a>
+  <a href="https://twitter.com/azn_arabin" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
+  </a>
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=azn-arabin&color=0070f3&style=flat-square&label=Profile+Views" alt="Profile Views" />
+</div>

@@ -47,6 +47,19 @@ const Home = () => {
           <a href="#portfolio" className={styles.outlineButton}>
             View Portfolio
           </a>
+          <a
+            href="https://leetcode.com/azn-arabin/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <img
+              src="https://img.shields.io/badge/dynamic/json?style=flat-square&labelColor=black&color=%23ffa116&label=Solved&query=solvedOverTotal&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fazn-arabin&logo=leetcode&logoColor=yellow"
+              alt="LeetCode user azn-arabin"
+              height={42}
+              style={{ borderRadius: "8px" }}
+            />
+          </a>
         </div>
 
         <div className={styles.socialsWrapper}>
@@ -115,33 +128,39 @@ const Home = () => {
             <div className={styles.codeLine}>
               <span className={styles.lineNumber}>5</span>
               <span className={`${styles.codeText} ${styles.indent2}`}>
+                <span className={styles.str}>"MERN Stack"</span>,{" "}
                 <span className={styles.str}>"Next.js"</span>,{" "}
-                <span className={styles.str}>"React Native"</span>,{" "}
-                <span className={styles.str}>"Laravel"</span>
+                <span className={styles.str}>"React Native"</span>
               </span>
             </div>
             <div className={styles.codeLine}>
               <span className={styles.lineNumber}>6</span>
+              <span className={`${styles.codeText} ${styles.indent2}`}>
+                <span className={styles.str}>"Laravel"</span>
+              </span>
+            </div>
+            <div className={styles.codeLine}>
+              <span className={styles.lineNumber}>7</span>
               <span className={`${styles.codeText} ${styles.indent1}`}>
                 <span className={styles.bracket}>]</span>,
               </span>
             </div>
             <div className={styles.codeLine}>
-              <span className={styles.lineNumber}>7</span>
+              <span className={styles.lineNumber}>8</span>
               <span className={`${styles.codeText} ${styles.indent1}`}>
                 <span className={styles.prop}>hardWorker</span>:{" "}
                 <span className={styles.bool}>true</span>,
               </span>
             </div>
             <div className={styles.codeLine}>
-              <span className={styles.lineNumber}>8</span>
+              <span className={styles.lineNumber}>9</span>
               <span className={`${styles.codeText} ${styles.indent1}`}>
                 <span className={styles.fn}>init</span>:{" "}
                 <span className={styles.kwd}>function</span>() {"{"}
               </span>
             </div>
             <div className={styles.codeLine}>
-              <span className={styles.lineNumber}>9</span>
+              <span className={styles.lineNumber}>10</span>
               <span className={`${styles.codeText} ${styles.indent2}`}>
                 <span className={styles.kwd}>return</span>{" "}
                 <span className={styles.str}>
@@ -151,13 +170,13 @@ const Home = () => {
               </span>
             </div>
             <div className={styles.codeLine}>
-              <span className={styles.lineNumber}>10</span>
+              <span className={styles.lineNumber}>11</span>
               <span className={`${styles.codeText} ${styles.indent1}`}>
                 {"}"}
               </span>
             </div>
             <div className={styles.codeLine}>
-              <span className={styles.lineNumber}>11</span>
+              <span className={styles.lineNumber}>12</span>
               <span className={styles.codeText}>
                 <span className={styles.bracket}>{`}`}</span>;
               </span>
