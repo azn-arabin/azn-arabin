@@ -43,12 +43,22 @@ I am a software craftsman from **Dhaka, Bangladesh**. I collaborate with profess
 ## GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=azn-arabin&show_icons=true&theme=transparent&hide_border=true&title_color=0070f3&icon_color=0070f3" alt="Arabin's Github Stats" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=azn-arabin&layout=compact&theme=transparent&hide_border=true&title_color=0070f3" alt="Top Languages" height="150" />
+  <a href="https://github.com/azn-arabin" target="_blank">
+    <img src="https://github-readme-stats.vercel.app/api?username=azn-arabin&show_icons=true&theme=default&include_all_commits=true&count_private=true" alt="Arabin's Github Stats" height="180" />
+  </a>
+  <a href="https://github.com/azn-arabin" target="_blank">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=azn-arabin&layout=compact&langs_count=8" alt="Top Languages" height="180" />
+  </a>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=azn-arabin&theme=default" alt="GitHub Streak" />
 </div>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=azn-arabin&theme=flat&no-frame=true&margin-w=15" alt="trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=azn-arabin&theme=flat&no-frame=true&row=1&column=7" alt="trophies" />
 </div>
 
 ## LeetCode Stats
