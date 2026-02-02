@@ -61,7 +61,7 @@ export const metadata = {
     canonical: "https://arabin.vercel.app/",
   },
   verification: {
-    google: "M45NWbcAxBLk87v3dclCGktRzKYaxMfD4HeFtxeoS-s",
+    google: "-_exzvpZzcYtj98xTgBB0XPfWWjUxceioDcWL_ao2IY",
   },
 };
 
