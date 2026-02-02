@@ -190,12 +190,12 @@ export const projects = [
     description:
       "The MERN stack app allows users to register, authenticate," +
       " and communicate in real-time with messaging and photo.",
-    thumb: "./images/projects/chat/thumb.png",
+    thumb: "/images/projects/chat/thumb.png",
     screenshots: [
-      "./images/projects/chat/thumb.png",
-      "./images/projects/chat/chat-1.png",
-      "./images/projects/chat/chat-2.png",
-      "./images/projects/chat/chat-3.png",
+      "/images/projects/chat/thumb.png",
+      "/images/projects/chat/chat-1.png",
+      "/images/projects/chat/chat-2.png",
+      "/images/projects/chat/chat-3.png",
     ],
     tech: ["MERN", "Socket.io", "Redux", "MUI"],
     completedAt: "June, 2023",
@@ -212,14 +212,14 @@ export const projects = [
       "University of Rajshahi.The project aims to provide a user-friendly" +
       " platform for projecting the total population of Bangladesh " +
       "based on user inputs.",
-    thumb: "./images/projects/demography/thumb.png",
+    thumb: "/images/projects/demography/thumb.png",
     screenshots: [
-      "./images/projects/demography/thumb.png",
-      "./images/projects/demography/demography-1.png",
-      "./images/projects/demography/demography-2.png",
-      "./images/projects/demography/demography-3.png",
-      "./images/projects/demography/demography-4.png",
-      "./images/projects/demography/demography-5.png",
+      "/images/projects/demography/thumb.png",
+      "/images/projects/demography/demography-1.png",
+      "/images/projects/demography/demography-2.png",
+      "/images/projects/demography/demography-3.png",
+      "/images/projects/demography/demography-4.png",
+      "/images/projects/demography/demography-5.png",
     ],
     tech: [
       "NextJS",
@@ -242,20 +242,14 @@ export const projects = [
       "where you can explore a compilation of my" +
       " personal projects, delve into my skillset, " +
       "and find comprehensive information about me.",
-    thumb: "./images/projects/portfolio/thumb.png",
+    thumb: "/images/projects/portfolio/thumb.png",
     screenshots: [
-      "./images/projects/portfolio/thumb.png",
-      "./images/projects/portfolio/portfolio-1.png",
-      "./images/projects/portfolio/portfolio-2.png",
-      "./images/projects/portfolio/portfolio-3.png",
+      "/images/projects/portfolio/thumb.png",
+      "/images/projects/portfolio/portfolio-1.png",
+      "/images/projects/portfolio/portfolio-2.png",
+      "/images/projects/portfolio/portfolio-3.png",
     ],
-    tech: [
-      "NextJS",
-      "React-Bootstrap",
-      "SendGrid",
-      "Framer-motion",
-      "Firebase",
-    ],
+    tech: ["NextJS", "Tailwind CSS", "SendGrid", "Framer-motion", "Firebase"],
     completedAt: "July, 2023",
     source: "https://github.com/azn-arabin/my-portfolio",
     visit: "https://arabin.vercel.app",
@@ -268,11 +262,11 @@ export const projects = [
       "all the results of my batch in the EEE " +
       "Department at University of Rajshahi through " +
       "this Android app.",
-    thumb: "./images/projects/result/thumb.png",
+    thumb: "/images/projects/result/thumb.png",
     screenshots: [
-      "./images/projects/result/thumb.png",
-      "./images/projects/result/result-1.png",
-      "./images/projects/result/result-2.png",
+      "/images/projects/result/thumb.png",
+      "/images/projects/result/result-1.png",
+      "/images/projects/result/result-2.png",
     ],
     tech: ["React Native", "Firebase"],
     completedAt: "June, 2022",
@@ -286,10 +280,10 @@ export const projects = [
     description:
       "Enjoy a classic Snake Game with three levels of difficulty," +
       " offering a simple and engaging gaming experience.",
-    thumb: "./images/projects/snake/thumb.png",
+    thumb: "/images/projects/snake/thumb.png",
     screenshots: [
-      "./images/projects/snake/thumb.png",
-      "./images/projects/snake/snake-1.png",
+      "/images/projects/snake/thumb.png",
+      "/images/projects/snake/snake-1.png",
     ],
     tech: ["Java", "Firebase"],
     completedAt: "January, 2021",
@@ -304,10 +298,10 @@ export const projects = [
       "Experience the simplicity of a classic Tic-Tac-Toe Game, " +
       "where you can engage in friendly matches against the computer " +
       "or challenge another player for ultimate victory.",
-    thumb: "./images/projects/tic-tac/thumb.png",
+    thumb: "/images/projects/tic-tac/thumb.png",
     screenshots: [
-      "./images/projects/tic-tac/thumb.png",
-      "./images/projects/tic-tac/tic-tac-1.png",
+      "/images/projects/tic-tac/thumb.png",
+      "/images/projects/tic-tac/tic-tac-1.png",
     ],
     tech: ["Java", "Firebase"],
     completedAt: "February, 2021",

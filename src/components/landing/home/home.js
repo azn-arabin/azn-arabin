@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "../../../styles/home.module.css";
 import SocialMedia from "@/components/common/social-media";
 import { homeContent } from "@/constants";
@@ -40,10 +41,14 @@ const Home = () => {
       </div>
       <div className={styles.rightSide}>
         <div className={styles.shape}>
-          <img
-            src={"./images/laptop.png"}
-            alt={"laptop"}
+          <Image
+            src="/images/laptop.png"
+            alt="laptop"
             className={styles.image}
+            width={600}
+            height={500}
+            priority
+            quality={90}
           />
         </div>
       </div>

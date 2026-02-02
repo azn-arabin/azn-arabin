@@ -1,9 +1,11 @@
 "use client";
 
-import { Container } from "react-bootstrap";
-
+// Lightweight container component - no Bootstrap needed
 export const AppContainer = ({ className, id, children }) => (
-  <Container className={className} id={id}>
+  <div
+    className={`mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl ${className || ""}`}
+    id={id}
+  >
     {children}
-  </Container>
+  </div>
 );

@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/common.module.css";
-import { Container } from "react-bootstrap";
 import { Events, Link } from "react-scroll";
 import {
   UilBars,
@@ -55,7 +54,9 @@ const Header = () => {
           : null
       }
     >
-      <Container className={styles.header}>
+      <div
+        className={`mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl ${styles.header}`}
+      >
         <Link
           className={styles.brand}
           spy={true}
@@ -104,8 +105,8 @@ const Header = () => {
             )}
           </button>
         </div>
-      </Container>
-      <Container>
+      </div>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <motion.div
           animate={showNavs ? "open" : "closed"}
           variants={{
@@ -115,7 +116,7 @@ const Header = () => {
         >
           <Navs className={showNavs ? styles.showNavs : styles.hideNavs} />
         </motion.div>
-      </Container>
+      </div>
     </div>
   );
 };

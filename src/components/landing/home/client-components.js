@@ -4,7 +4,7 @@ import { motion, useCycle } from "framer-motion";
 import React from "react";
 import { UilDownloadAlt } from "@iconscout/react-unicons";
 import { logEvent } from "firebase/analytics";
-import { analytics } from "@/components/providers";
+import { getAnalyticsInstance } from "@/components/providers";
 
 export const StackAnimation = ({ children, content }) => {
   const [currentLine, cycleLines] = useCycle(...content);
@@ -40,7 +40,13 @@ export const DownloadCVButton = ({ children }) => {
       newTab.focus(); // Focus on the new tab if it was successfully opened
     }
 
-    logEvent(analytics, "resume_downloaded");
+    getAnalyticsInstance()
+      .then((a) => {
+        if (a) logEvent(a, "resume_downloaded");
+      })
+      .catch(() => {
+        // ignore analytics failures
+      });
   };
 
   return (

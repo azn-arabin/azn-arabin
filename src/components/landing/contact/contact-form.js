@@ -3,10 +3,8 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import styles from "@/styles/contact.module.css";
-import { Form, InputGroup, Spinner } from "react-bootstrap";
 
 const ContactForm = () => {
-  const [validated, setValidated] = useState(false);
   const [prevMail, setPrevMail] = useState("");
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
@@ -35,51 +33,46 @@ const ContactForm = () => {
     event.preventDefault();
     setLoading(true);
 
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    } else {
-      if (data.email === prevMail) {
-        toastHandler(
-          "Message received! Please try again later or use a different email if needed.",
-          "warning"
-        );
-      } else {
-        try {
-          const response = await fetch("/api/sendgrid", {
-            body: JSON.stringify({
-              ...data,
-              subject: `From Portfolio - ${data.subject}`,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${process.env.NEXT_PUBLIC_SENDGRID_AUTHENTICATION_KEY}`,
-            },
-            method: "POST",
-          });
-
-          if (response.status === 200) {
-            const result = await response.json();
-            console.log(result);
-            toastHandler(result.message, "success");
-            setPrevMail(data.email);
-          } else {
-            toastHandler(
-              "Something went wrong! Please try again later.",
-              "error"
-            );
-          }
-        } catch (e) {
-          toastHandler(
-            "Something went wrong! Please try again later.",
-            "error"
-          );
-        }
-      }
+    // Basic client-side validation (native required fields + a small guard)
+    if (!data.name || !data.email || !data.subject || !data.message) {
+      toastHandler("Please fill in all required fields.", "warning");
+      setLoading(false);
+      return;
     }
 
-    setValidated(true);
+    if (data.email === prevMail) {
+      toastHandler(
+        "Message received! Please try again later or use a different email if needed.",
+        "warning",
+      );
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          ...data,
+          subject: `From Portfolio - ${data.subject}`,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_SENDGRID_AUTHENTICATION_KEY}`,
+        },
+        method: "POST",
+      });
+
+      if (response.status === 200) {
+        const result = await response.json();
+        toastHandler(result.message, "success");
+        setPrevMail(data.email);
+      } else {
+        toastHandler("Something went wrong! Please try again later.", "error");
+      }
+    } catch (e) {
+      toastHandler("Something went wrong! Please try again later.", "error");
+    }
+
     setLoading(false);
   };
 
@@ -90,76 +83,62 @@ const ContactForm = () => {
         I'd love to hear more about who you are and the exciting concepts you're
         pondering.
       </span>
-      <Form
-        noValidate
-        validated={validated}
-        onSubmit={handleSubmit}
-        className={styles.form}
-      >
+      <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.inputContainer}>
-          <Form.Group controlId="validationCustom01">
-            <Form.Label>Name*</Form.Label>
-            <Form.Control
+          <div className={styles.field}>
+            <label htmlFor="name">Name*</label>
+            <input
+              id="name"
               required
               type="text"
               name="name"
               value={data.name}
               onChange={handleOnChange}
               placeholder="Your name..."
-              maxLength="30"
+              maxLength={30}
+              autoComplete="name"
             />
-            <Form.Control.Feedback type={"invalid"}>
-              Please enter your name.
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group controlId="validationCustom02">
-            <Form.Label>Email*</Form.Label>
-            <Form.Control
+          </div>
+          <div className={styles.field}>
+            <label htmlFor="email">Email*</label>
+            <input
+              id="email"
               required
               type="email"
               name="email"
               value={data.email}
               onChange={handleOnChange}
               placeholder="Your email..."
+              autoComplete="email"
             />
-            <Form.Control.Feedback type={"invalid"}>
-              Please enter a valid email.
-            </Form.Control.Feedback>
-          </Form.Group>
+          </div>
         </div>
-        <Form.Group controlId="validationCustom01">
-          <Form.Label>Subject*</Form.Label>
-          <Form.Control
+        <div className={styles.field}>
+          <label htmlFor="subject">Subject*</label>
+          <input
+            id="subject"
             required
             type="text"
             name="subject"
             value={data.subject}
             onChange={handleOnChange}
             placeholder="Subject..."
-            maxLength="80"
+            maxLength={80}
+            autoComplete="off"
           />
-          <Form.Control.Feedback type={"invalid"}>
-            Please enter subject.
-          </Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group controlId="validationCustom01">
-          <Form.Label>Message*</Form.Label>
-          <InputGroup hasValidation>
-            <Form.Control
-              as="textarea"
-              name="message"
-              value={data.message}
-              onChange={handleOnChange}
-              placeholder="Leave a message here..."
-              style={{ height: "90px" }}
-              required
-              maxLength="600"
-            />
-            <Form.Control.Feedback type="invalid">
-              Please write your message...
-            </Form.Control.Feedback>
-          </InputGroup>
-        </Form.Group>
+        </div>
+        <div className={styles.field}>
+          <label htmlFor="message">Message*</label>
+          <textarea
+            id="message"
+            name="message"
+            value={data.message}
+            onChange={handleOnChange}
+            placeholder="Leave a message here..."
+            required
+            maxLength={600}
+          />
+        </div>
         <button
           type={"submit"}
           style={{
@@ -169,10 +148,10 @@ const ContactForm = () => {
           className={"button"}
           disabled={loading}
         >
-          Send Message {loading && <Spinner animation={"border"} size={"sm"} />}
+          {loading ? "Sending..." : "Send Message"}
         </button>
         <ToastContainer />
-      </Form>
+      </form>
     </div>
   );
 };

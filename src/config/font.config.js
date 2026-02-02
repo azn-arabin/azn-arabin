@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
-
-export const interFont = Inter({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--default-font",
-  subsets: ["latin"],
-  display: "swap",
-});
+// Using next/font/google triggers a build-time download from Google Fonts.
+// That can fail in offline/locked-down environments and break CI builds.
+// For a portfolio site, a high-quality system font stack is a safe default.
+export const interFont = {
+  className: "",
+};

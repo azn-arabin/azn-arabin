@@ -48,7 +48,7 @@
   border-radius: inherit;
 }
 
-.imgContainer > img {
+.imgContainer img {
   border-radius: inherit;
   width: 100%;
   height: auto;
@@ -56,7 +56,7 @@
   transition: all 2s ease;
 }
 
-.project:hover .imgContainer > img {
+.project:hover .imgContainer img {
   transform: scale(1.2);
   overflow: hidden;
 }
@@ -76,6 +76,27 @@
   max-height: 100vh;
   max-width: 100vw;
   overflow-y: auto;
+  border: 1px solid color-mix(in srgb, var(--border-color) 70%, transparent);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  /* Must be above the fixed site header (z-index: 999) */
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modalCard {
+  width: min(1100px, 100%);
+  max-height: 90vh;
+  overflow: auto;
 }
 
 .modalHeader {
@@ -83,6 +104,11 @@
   width: 100%;
   justify-content: flex-end;
   padding: 5px 8px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: color-mix(in srgb, var(--main-bg) 90%, transparent);
+  backdrop-filter: blur(8px);
 }
 
 .modalHeader > button {
@@ -106,10 +132,92 @@
   flex: 2;
 }
 
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carouselStage {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: color-mix(in srgb, var(--second-bg) 75%, transparent);
+}
+
+.carouselNav {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+.navButton {
+  pointer-events: auto;
+  border: 1px solid var(--border-color);
+  background: color-mix(in srgb, var(--main-bg) 80%, transparent);
+  color: var(--text-color);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  transition: transform 0.12s ease, background 0.2s ease;
+}
+
+.navButton:hover {
+  background: var(--selected-color);
+  transform: translateY(-1px);
+}
+
+.counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: color-mix(in srgb, var(--main-bg) 80%, transparent);
+}
+
 .screenshot {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.thumb {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  width: 84px;
+  flex: 0 0 auto;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.12s ease, border-color 0.2s ease;
+}
+
+.thumb:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.thumbActive {
+  opacity: 1;
+  border-color: var(--selected-color);
 }
 
 .modalRight {

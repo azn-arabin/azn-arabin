@@ -1,26 +1,21 @@
 "use client";
 
-import { OverlayTrigger, Tooltip as BTooltip } from "react-bootstrap";
-
 export default function Tooltip({
   id = "bottom-tooltip",
   children,
   tooltip,
   placement = "bottom",
 }) {
+  // Lightweight tooltip replacement (removes react-bootstrap dependency).
+  // Keeps the same public API but uses the native `title` attribute.
   return (
-    <OverlayTrigger
-      overlay={
-        <BTooltip id={id} style={{ marginTop: "8px" }}>
-          {tooltip}
-        </BTooltip>
-      }
-      placement={placement}
-      delayShow={200}
-      delayHide={150}
-      defaultOverlayShown={false}
+    <span
+      id={id}
+      title={tooltip}
+      data-placement={placement}
+      style={{ display: "inline-flex" }}
     >
       {children}
-    </OverlayTrigger>
+    </span>
   );
 }

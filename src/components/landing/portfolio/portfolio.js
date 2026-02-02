@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "../../../styles/portfolio.module.css";
 import Layout from "@/components/common/layout";
 import Title from "@/components/common/title";
@@ -18,7 +19,14 @@ const Portfolio = () => {
               <div key={id} className={styles.project}>
                 <div className={styles.container}>
                   <div className={styles.imgContainer}>
-                    <img src={project.thumb} alt={project.name} />
+                    <Image
+                      src={project.thumb}
+                      alt={project.name}
+                      width={400}
+                      height={300}
+                      loading="lazy"
+                      quality={80}
+                    />
                   </div>
                   <div className={styles.hoverOn}>
                     <Tooltip tooltip={"Info"}>

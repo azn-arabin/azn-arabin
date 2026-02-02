@@ -1,7 +1,6 @@
 "use client"; // Error components must be Client Components
 
 import { useEffect } from "react";
-import { Container } from "react-bootstrap";
 
 export default function Error({ error, reset }) {
   useEffect(() => {
@@ -10,7 +9,7 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <Container className="py-10">
+    <div className="py-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       <h2>Something went wrong!</h2>
       <button
         onClick={
@@ -20,6 +19,6 @@ export default function Error({ error, reset }) {
       >
         Try again
       </button>
-    </Container>
+    </div>
   );
 }
