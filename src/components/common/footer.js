@@ -10,7 +10,7 @@ const Footer = () => {
       </div>
       <span>Md. Asaduzzman (Arabin)</span>
       <SocialMedia />
-      <span>© 2024 copyright all right reserved</span>
+      <span>© {new Date().getFullYear()} copyright all right reserved</span>
     </div>
   );
 };
