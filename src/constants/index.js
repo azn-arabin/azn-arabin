@@ -92,7 +92,7 @@ export const educations = [
     institution: "Bangladesh University of Engineering and Technology (BUET)",
     description:
       "Currently pursuing my Master's degree in Computer Science and Engineering, with a focus on deepening my knowledge in software engineering and gaining more insights into various aspects of computer science.",
-    duration: "Sept, 2023 - Present",
+    duration: "Sept, 2024 - Present",
   },
 ];
 
