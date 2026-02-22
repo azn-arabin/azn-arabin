@@ -25,7 +25,7 @@
 
 I am a software craftsman from **Dhaka, Bangladesh**. I collaborate with professionals and leaders who aspire to develop careers that provide intellectual and financial fulfillment.
 
-- Im currently working on scalable **Next.js** and **React Native** applications.
+- Im currently working on scalable **Full stack web** applications.
 - Im currently mastering **DSA & System Design**.
 - Ask me about **Full Stack Development, MERN, and Competitive Programming**.
 - Fun fact: I love solving algorithmic challenges on LeetCode!
